@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeNova Interactive Visual Gallery</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <div class="loader-text">Igniting Creativity...</div>
+  </div>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Code<span class="accent">Nova</span></div>
+    <div id="menuToggle" class="menu-icon"><div></div><div></div><div></div></div>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#coverflow">3D Gallery</a></li>
+        <li><a href="#gallery">Hover Magic</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Marquee -->
+  <div class="marquee-wrapper">
+    <div class="marquee">
+      Discover. Interact. Inspire. &nbsp; • &nbsp; Welcome to CodeNova Interactive Visual Gallery &nbsp; • &nbsp; Experience the Future of Web Design &nbsp; • &nbsp;
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO section with new headline -->
+    <section class="hero-section">
+      <h1 class="hero-title">Where will CodeNova take you today?</h1>
+      <p class="hero-sub">Experience interactive galleries, fluid visuals, and living color—designed for the next era.</p>
+    </section>
+
+    <!-- 3D Coverflow Gallery with tooltips -->
+    <section class="coverflow-section" id="coverflow">
+      <h2>3D Coverflow Gallery</h2>
+      <div class="coverflow-container">
+        <div class="coverflow">
+          <div class="coverflow-item active" data-tooltip="The Swiss Alps: Majestic snow peaks at sunrise.">
+            <img src="images/mountain.jpg" alt="Mountain">
+          </div>
+          <div class="coverflow-item" data-tooltip="Enchanted Forest: A path through ancient green trees.">
+            <img src="images/forest.jpg" alt="Forest">
+          </div>
+          <div class="coverflow-item" data-tooltip="Mirror Lake: Crystal clear water reflects untamed nature.">
+            <img src="images/lake.jpg" alt="Lake">
+          </div>
+          <div class="coverflow-item" data-tooltip="Desert Dunes: Golden sands under endless blue sky.">
+            <img src="images/desert.jpg" alt="Desert">
+          </div>
+          <div class="coverflow-item" data-tooltip="Pacific Sunset: Waves and the last rays of the day.">
+            <img src="images/ocean.jpg" alt="Ocean">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hover Gallery: Transformations, with tooltips -->
+    <section id="gallery">
+      <h2>Hover Gallery: Transformations</h2>
+      <div class="gallery">
+        <div class="hover-img" style="background-image:url('images/before1.jpg');" data-hover="images/after1.jpg" data-tooltip="Cityscape: Black and white, transformed to vivid color!"></div>
+        <div class="hover-img" style="background-image:url('images/before2.jpg');" data-hover="images/after2.jpg" data-tooltip="Urban Park: From wild grass to perfectly mowed green."></div>
+        <div class="hover-img" style="background-image:url('images/before3.jpg');" data-hover="images/after3.jpg" data-tooltip="Gourmet Dish: A humble meal upgraded to a chef's creation."></div>
+      </div>
+      <p class="gallery-desc">
+        Hover over each photo to see something extraordinary.
+      </p>
+    </section>
+  </main>
+
+  <!-- Floating tooltip -->
+  <div id="custom-tooltip"></div>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
